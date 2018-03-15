@@ -10,18 +10,50 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 html {
  font-size: 16px;
- font-family: 'Merriweather', serif;
-}
-body{
- padding: 1em 1em 1em 1em;
- h1 {
-   font-size: 1.5em;
- }
- h2{
-   font-size: 1em;
- }
- img{
-   width: 100%;
- }
 
+}
+body {
+  line-height: 1.5em;
+  background: #FAFAFA;
+  font-family: 'Merriweather', serif;
+  color: #212121;
+}
+p {margin-bottom: 1.3em;}
+
+h2, h3, h4 {
+  margin: 1em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1em;
+}
+h1 {
+  font-size: 1.618em;
+}
+
+h2 {font-size: 1.618em;}
+
+h3 {font-size: 1em;}
+
+a {
+  text-decoration: none;
+  color: #9e9e9e;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  color: #424242;
+}
+
+
+header{
+  padding: 1em 1em 1em 1em;
+  background: #EEEEEE;
+}
+main {
+  padding: 1em 1em 1em 1em;
+}
+footer {
+  padding: 1em 0 0 0;
+  border-top: solid 1px #BDBDBD;
+  text-align: center;
 }
