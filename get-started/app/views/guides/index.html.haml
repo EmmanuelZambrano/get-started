@@ -1,5 +1,3 @@
-%h1 GetStarted
-
 %table
   %thead
     %tr
@@ -17,7 +15,4 @@
         %td= link_to 'Show', guide
         %td= link_to 'Edit', edit_guide_path(guide)
         %td= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
 = link_to 'New Guide', new_guide_path

@@ -7,5 +7,9 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:rel => "stylesheet", :href => "//basehold.it/24"}
   %body
-    = yield
+    %header
+      %h1 GetStarted
+    %main
+      = yield
