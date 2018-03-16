@@ -7,26 +7,25 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* Begin site styles below */
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans');
+
 html {
  font-size: 16px;
 
 }
 body {
-  line-height: 1.5em;
+  line-height: 1.618em;
   background: #ffffff;
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather Sans', sans-serif;
   color: #212121;
 }
 p {
-  margin-bottom: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto 1em auto;
 }
 
-h2, h3, h4 {
-  margin: 0.618em 0 0.618em;
-  font-weight: inherit;
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  margin: .618em 0 .618em 0;
   line-height: 1.618em;
 }
 h1 {
@@ -39,42 +38,53 @@ h3 {font-size: 1em;}
 
 a {
   text-decoration: none;
-  border-bottom: solid 1px #BDBDBD;
-  color: #424242;
+  border-bottom: solid 2px #43a047;
+  color: #212121;
 }
 a:visited {
   text-decoration: none;
 }
 a:hover {
-  border-bottom: solid 1.4px #43a047;
+  color: #43a047;
 }
 
 
 header{
-  padding: 1em 1em 1em 1em;
+  padding: 1em 1.618em 1.618em 1.618em;
   border-bottom: solid 1px #BDBDBD;
   background: #FAFAFA;
-}
-main {
+  a {
+    border-bottom: none;
+  }
+  a:hover {
+    color: #43a047;
+  }
 }
 section {
-  padding: 1.618em 1em 1.618em 1em;
+  padding: 4.236em 1em 4.236em 1em;
 }
 footer {
   background: #fafafa;
-  padding: 1.618em 1em 1.618em 1em;
+  padding: 1.618em 1.618em 1.618em 1.618em;
   border-top: solid 1px #BDBDBD;
+}
+#action{
+  background: #f5f5f5;
 }
 .center-text{
   text-align: center;
-  padding: 2.618em 1em 2.618em 1em;
-}
-#action {
-  text-align: center;
-  background: #1e88e5;
+  a{
+    border-radius: 2px;
+    padding: .618em;
+    border: none;
+    background: #1e88e5;
+    color: #ffffff;
+  }
+  a:hover {
+    background:#005cb2;
+  }
 }
 form {
-  text-align: left;
 }
 input, textarea {
   font-family: inherit;
@@ -94,13 +104,38 @@ input:focus, textarea:focus {
   box-shadow: 0px 4px 4px 1px rgba(189,189,189,1);
 }
 input[type=submit] {
-  width: 5em;
+  padding: .618em;
+  width: 4.236em;
   border: none;
-  background: #1565c0;
+  border-radius: 2px;
+  background: #1e88e5;
   color: #ffffff;
+}
+input[type=submit]:hover {
+background:#005cb2;
 }
 textarea {
   height  : 360px;
   resize  : none;
   overflow: auto;
+}
+li {
+  display: inline;
+}
+@media (min-width: 500px) {
+  header, footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  section{
+    width: 29.03em;
+    margin: 1em auto 1em auto;
+  }
+}
+@media (min-width: 900px) {
+  section{
+    width: 46.971em;
+  }
 }
