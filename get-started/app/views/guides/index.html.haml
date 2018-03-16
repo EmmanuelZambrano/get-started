@@ -7,4 +7,15 @@
         %td= link_to 'Show', guide
         %td= link_to 'Edit', edit_guide_path(guide)
         %td= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }
-= link_to 'New Guide', new_guide_path
+%section{:class => "center-text"}
+  %h2 Welcome to GetStarted
+  %p The hub of information for getting started with new things. We have guides to help you get started on new Skills, Hobbies, or Exercise created by masters in their field.
+%section{:id => "action", :class =>"center-text"}
+  %h2 Start something new.
+  %span Skills
+  %span Hobbies
+  %span Exercise
+%section{:class =>"center-text"}
+  %h2 Not finding what you're looking for?
+  %p Create your own guide.
+  = link_to 'New Guide', new_guide_path
