@@ -9,14 +9,11 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header
-      %h1 GetStarted
+      %h1
+        = link_to 'GetStarted', guide_index_path
       %ul
         %li
-          = link_to 'Skills', new_guide_path
-        %li
-          = link_to 'Hobbies', new_guide_path
-        %li
-          = link_to 'Exercise', new_guide_path
+          = link_to 'New Guide', new_guide_path
     %main
       = yield
     %footer

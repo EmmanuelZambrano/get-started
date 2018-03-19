@@ -53,6 +53,11 @@ header{
   padding: 1em 1.618em 1.618em 1.618em;
   border-bottom: solid 1px #BDBDBD;
   background: #FAFAFA;
+  h1 {
+    a:hover {
+      color: #212121;
+    }
+  }
   a {
     border-bottom: none;
   }
