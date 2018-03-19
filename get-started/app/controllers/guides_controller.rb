@@ -15,6 +15,7 @@ class GuidesController < ApplicationController
   # GET /guides/new
   def new
     @guide = Guide.new
+    @category_options = Category.all
   end
 
   # GET /guides/1/edit
@@ -69,6 +70,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:title, :content)
+      params.require(:guide).permit(:title, :content, :category_id)
     end
 end

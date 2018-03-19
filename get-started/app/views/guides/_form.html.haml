@@ -5,7 +5,9 @@
       %ul
         - @guide.errors.full_messages.each do |message|
           %li= message
-
+  .field
+    = f.label :category_id
+    = f.select :category_id, options_from_collection_for_select(@category_options, "id", "name")
   .field
     = f.label :title
     = f.text_field :title
