@@ -1,12 +1,9 @@
 %section
-  = link_to 'Back', guides_path
   %p#notice= notice
 
-  %p
-    %b Title:
+  %h2
     = @guide.title
   %p
-    %b Content:
     = @guide.content
 
   = link_to 'Edit', edit_guide_path(@guide)
