@@ -20,6 +20,7 @@ class GuidesController < ApplicationController
 
   # GET /guides/1/edit
   def edit
+    @category_options = Category.all
   end
 
   # POST /guides
