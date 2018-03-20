@@ -2,12 +2,11 @@
   %tbody
     - @guides.each do |guide|
       %tr
-        %td= guide.title
-        %td= guide.content
+        %td
+          = link_to guide.title, guide
         %td= guide.category.name
-        %td= link_to 'Show', guide
         %td= link_to 'Edit', edit_guide_path(guide)
-        %td= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Delete', guide, method: :delete, data: { confirm: 'Are you sure?' }
 %section{:class => "center-text"}
   %h2 Welcome to GetStarted
   %p The hub of information for getting started with new things. We have guides to help you get started on new Skills, Hobbies, or Exercise created by masters in their field.

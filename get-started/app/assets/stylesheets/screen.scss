@@ -47,7 +47,9 @@ a:visited {
 a:hover {
   color: #43a047;
 }
-
+span {
+  color: #43a047;
+}
 
 header{
   padding: 1em 1.618em 1.618em 1.618em;
@@ -61,12 +63,14 @@ header{
   a {
     border-bottom: none;
   }
-  a:hover {
-    color: #43a047;
-  }
 }
 section {
   padding: 4.236em 1em 4.236em 1em;
+}
+article {
+  box-shadow: 0px 1px 2px 0px rgba(189,189,189,1);
+  background: #FAFAFA;
+  padding: 2.618em 1em 4.236em 1em;
 }
 footer {
   background: #fafafa;

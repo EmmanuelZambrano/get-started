@@ -1,9 +1,9 @@
 %section
   %p#notice= notice
+  %span= @guide.category.name
 
-  %h2
-    = @guide.title
-  %p
-    = @guide.content
-
-  = link_to 'Edit', edit_guide_path(@guide)
+  %article
+    %h2
+      = @guide.title
+    %p
+      = @guide.content
