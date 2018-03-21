@@ -43,7 +43,7 @@ class GuidesController < ApplicationController
   # PATCH/PUT /guides/1.json
   def update
     respond_to do |format|
-      if @guide.update(guide_params)
+      if @guide.update(edit_guide_params)
         format.html { redirect_to @guide, notice: 'Guide was successfully updated.' }
         format.json { render :show, status: :ok, location: @guide }
       else
@@ -72,5 +72,8 @@ class GuidesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
       params.require(:guide).permit(:title, :content, :category_id)
+    end
+    def edit_guide_params
+      params.require(:guide).permit(:title, :content)
     end
 end
