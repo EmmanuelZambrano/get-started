@@ -31,18 +31,25 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 1.618em;
 }
-
-h2 {font-size: 1.618em;}
-
-h3 {font-size: 1em;}
+h2 {
+  font-size: 1.618em;
+}
+h3 {
+  font-size: 1em;
+}
+h4 {
+  font-size: 1em;
+}
 
 a {
   text-decoration: none;
-  border-bottom: solid 2px #43a047;
   color: #212121;
+  border-bottom: solid 1.5px #43a047;
+
 }
 a:visited {
   text-decoration: none;
+  color: #212121;
 }
 a:hover {
   color: #43a047;
@@ -56,12 +63,12 @@ header{
   border-bottom: solid 1px #BDBDBD;
   background: #FAFAFA;
   h1 {
+    a{
+      border-bottom: none;
+    }
     a:hover {
       color: #212121;
     }
-  }
-  a {
-    border-bottom: none;
   }
 }
 section {
@@ -79,8 +86,25 @@ footer {
 }
 #action{
   background: #f5f5f5;
+  #list-wrapper{
+    table{
+      font-size: .8em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      tr{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
 }
 .center-text{
+  text-align: center;
+}
+
+.has-button{
   text-align: center;
   a{
     border-radius: 2px;
@@ -92,8 +116,6 @@ footer {
   a:hover {
     background:#005cb2;
   }
-}
-form {
 }
 input, textarea {
   font-family: inherit;

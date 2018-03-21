@@ -1,21 +1,40 @@
-%table
-  %tbody
-    - @guides.each do |guide|
-      %tr
-        %td
-          = link_to guide.title, guide
-        %td= guide.category.name
-        %td= link_to 'Edit', edit_guide_path(guide)
-        %td= link_to 'Delete', guide, method: :delete, data: { confirm: 'Are you sure?' }
 %section{:class => "center-text"}
   %h2 Welcome to GetStarted
   %p The hub of information for getting started with new things. We have guides to help you get started on new Skills, Hobbies, or Exercise created by masters in their field.
 %section{:id => "action", :class =>"center-text"}
   %h2 Start something new.
-  %span Skills
-  %span Hobbies
-  %span Exercise
-%section{:class =>"center-text"}
-  %h2 Not finding what you're looking for?
+  %div{:id => "list-wrapper"}
+    %h3 Skills
+    %table
+      %tbody
+        - @skills.each do |guide|
+          %tr
+            %td
+              = link_to guide.title, guide
+            %td
+              = link_to 'Edit', edit_guide_path(guide)
+              = link_to 'Delete', guide, method: :delete, data: { confirm: 'Are you sure?' }
+    %h3 Hobbies
+    %table
+      %tbody
+        - @hobbies.each do |guide|
+          %tr
+            %td
+              = link_to guide.title, guide
+            %td
+              = link_to 'Edit', edit_guide_path(guide)
+              = link_to 'Delete', guide, method: :delete, data: { confirm: 'Are you sure?' }
+    %h3 Exercise
+    %table
+      %tbody
+        - @exercise.each do |guide|
+          %tr
+            %td
+              = link_to guide.title, guide
+            %td
+              = link_to 'Edit', edit_guide_path(guide)
+              = link_to 'Delete', guide, method: :delete, data: { confirm: 'Are you sure?' }
+%section{:class =>"center-text, has-button"}
+  %h2 Interested in sharing your knowledge?
   %p Create your own guide.
   = link_to 'New Guide', new_guide_path

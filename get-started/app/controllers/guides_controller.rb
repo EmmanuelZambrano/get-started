@@ -5,6 +5,10 @@ class GuidesController < ApplicationController
   # GET /guides.json
   def index
     @guides = Guide.all
+    @skills = Guide.where(category_id: "6")
+    @hobbies = Guide.where(category_id: "7")
+    @exercise = Guide.where(category_id: "8")
+    @category_options = Category.all
   end
 
   # GET /guides/1
